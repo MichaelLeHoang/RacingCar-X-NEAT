@@ -1,114 +1,75 @@
-# Racing Car AI with NEAT 🏎️
+# Racing Car X NEAT
 
-## Project Overview
+An interactive Pygame application for training NEAT-controlled cars, racing a ten-level campaign, managing saved models, and building reusable custom tracks.
 
-This project implements a racing car game where an AI, trained using the NeuroEvolution of Augmenting Topologies (NEAT) algorithm, learns to navigate a track. The AI controls a car, making decisions to rotate and move forward to avoid track borders and reach the finish line. The game is built using Pygame for rendering and NEAT-Python for evolving neural networks.
+## Setup
 
-## Features
-
-- **Game Mechanics**: A car navigates a predefined track, avoiding borders and aiming for the finish line.
-- **AI Training**: Utilizes the NEAT algorithm to evolve neural networks that control the car's movements.
-- **Graphics**: Uses Pygame to render the car, track, grass background, and finish line with smooth rotation animations.
-- **Collision Detection**: Implements mask-based collision detection for track borders and the finish line (partially implemented).
-- **Fitness Evaluation**: The AI's fitness is based on survival time, with potential bonuses for reaching the finish line and penalties for collisions (partially implemented).
-
-## Requirements
-
-- Python 3.x
-- Pygame
-- NEAT-Python
-- Image assets (car, track, track border, finish line, grass) located in the `imgs` directory
-
-## Installation
-
-1. **Clone the Repository**:
-
-   ```bash
-   git clone <repository-url>
-   cd <repository-directory>
-   ```
-
-2. **Install Dependencies**:
-
-   ```bash
-   pip install pygame neat-python
-   ```
-
-3. **Prepare Assets**: Ensure the following image files are in the `imgs` directory:
-
-   - `RedCar.png` (red car image, unused in current implementation)
-   - `WhiteCar.png` (white car image, used for the AI-controlled car)
-   - `track.png` (track image)
-   - `track-border.png` (track border for collision detection)
-   - `finish.png` (finish line image)
-   - `grass.jpg` (background grass image)
-
-4. **Configure NEAT**: Ensure the `config_feedforward.txt` file is in the project directory. This file defines the NEAT algorithm's parameters, such as population size and mutation rates.
-
-## Usage
-
-1. **Run the Game**:
-
-   ```bash
-   python racing_car_ai.py
-   ```
-
-   The script will load the NEAT configuration, initialize the population, and start training the AI. The game window will display multiple cars (each controlled by a neural network) attempting to navigate the track.
-
-2. **Training Process**:
-
-   - The NEAT algorithm evolves neural networks over generations (number of generations configurable in the script).
-   - Each generation, cars are evaluated based on their fitness (currently based on survival time, with collision and finish line logic partially implemented).
-   - The best-performing neural network is retained, and the population evolves through mutation and crossover.
-
-3. **Controls**:
-
-   - No manual controls are available, as the AI fully controls the cars.
-   - Close the Pygame window to stop the simulation.
-
-## File Structure
-
-```
-RacingCar/
-├── imgs/
-│   ├── track.png
-│   ├── track-border.png
-│   ├── finish.png
-│   ├── grass.jpg
-├── RedCar.png
-├── WhiteCar.png
-├── main.py
-└── config_feedforward.txt
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python RacingCar.py
 ```
 
-## How It Works
+The window is resizable and uses a logical 1280×800 layout.
 
-- **Properties Class**: Base class managing the car's properties, including velocity, rotation, acceleration, and movement physics. It handles rotation, forward movement, slowing down, and collision detection.
-- **Car Class**: Inherits from `Properties`, specifying the car's image (`WhiteCar.png`) and starting position.
-- **NEAT Integration**: Each car is controlled by a feedforward neural network. Inputs are placeholders for sensor data (e.g., left, right, in_front, left_45, right_45), but the logic is incomplete. Outputs determine car actions (currently unimplemented).
-- **Collision Detection**: Uses Pygame's mask-based collision to detect overlaps with the track border and finish line (commented out in the code).
-- **Fitness Function**: Cars gain fitness for surviving longer, with planned penalties for collisions and bonuses for reaching the finish line (not fully implemented).
+## Main modes
 
-## Notes
+- **Get Started** — drag a saved model from the inventory onto an unlocked campaign level. Completing a level unlocks the next one globally.
+- **Train** — configure one or more named car models and select unlocked campaign/custom tracks, then run generations continuously until Stop is pressed or a genome finishes.
+- **Custom Tracks** — place snapping straight, corner, and start/finish pieces extracted from the original `track.png`. Components are reused at every angle by rotating them at runtime.
 
-- The image paths in the code (e.g., `E:\Python\ML\Game\RacingCar\imgs\`) are hardcoded. Update them to use relative paths (e.g., `os.path.join('imgs', 'WhiteCar.png')`) for portability.
-- The AI decision-making logic (`output` conditions in `main`) is incomplete, as the neural network outputs are not mapped to actions (e.g., rotate left, right, or move forward).
-- Collision detection and finish line logic are commented out, so the AI currently does not respond to track borders or the finish line.
-- The game runs at 60 FPS, but performance may vary with a large population size.
+First Lap in both Campaign and Train uses the exact previous-version bitmap track, border, finish line, scale, and spawn geometry.
 
-## Future Improvements
+## Track editor controls
 
-- Complete the AI decision-making logic by mapping neural network outputs to car actions (e.g., rotate left, rotate right, move forward).
-- Uncomment and refine the collision detection and finish line logic to penalize crashes and reward reaching the finish line.
-- Add sensor inputs (e.g., raycasting) to provide the AI with meaningful data about the track and obstacles.
-- Implement a manual play mode for human players.
-- Add a graphical interface to visualize training progress and neural network performance.
+- Left click places or selects a piece.
+- Right click deletes a piece.
+- **R** rotates the selected or next piece clockwise by 90 degrees.
+- **Delete/Backspace** removes the selected piece.
+- **Ctrl/Cmd+Z** undoes the last edit.
+- The pill-shaped Rotate, Delete, Clear, Undo, Test, and Save controls provide mouse alternatives.
 
-## License
+A saved track must contain exactly one start/finish piece, at least eight pieces, matched joins, and one connected non-branching loop. Checkpoints are generated automatically.
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+## Models and storage
 
-## Acknowledgments
+- Champions are saved as versioned, non-executable `.rcmodel` JSON files.
+- Custom tracks are saved as versioned `.rctrack` JSON files.
+- Get Started and the saved-model inventory read from the same model collection. The inventory count and pagination expose every saved model.
+- Select a model and use **Rename** or **Delete**; right-clicking a card is also a rename shortcut. Deletion asks for confirmation.
+- Hover a model and press **Export** to copy it to the exports folder.
+- Place `.rcmodel` or `.rctrack` files in the imports folder and press **Import**.
+- Local data defaults to `~/.racing_car_x_neat`; set `RACING_DATA_DIR` to override it.
 
-- Inspired by classic racing games.
-- Built using the NEAT-Python library and Pygame.
+All car sprites are normalized to 32×64 with transparent backgrounds. Each car type exposes saved performance stats for maximum speed, acceleration, and turning while controllers keep the same five normalized inputs and four actions.
+
+## Continuous training
+
+- **Start Training** automatically advances through generations and rotates across selected tracks.
+- Training completes immediately when the first genome returns to and overlaps the finish-line pixel mask; that finisher becomes the saveable best model.
+- **Stop Training** immediately ends the partial generation and keeps its best genome available for saving.
+- Finishing or stopping opens a confirmation panel with **Save Best Model** and **Not Now** actions.
+- Space pauses or resumes without advancing simulation time.
+- The 1×, 2×, 4×, and Max pills change execution speed without changing simulation behavior.
+- Training stops automatically when the champion validates on all selected tracks; it can then be saved or restarted.
+
+Use the **+** button to create up to six independent training-model configurations. Each tab retains its own name, car type, stats, selected tracks, population, generation, and current champion.
+
+The Train screen reports live generation, best fitness, selected and passed tracks, run status, and car performance. Saved-model inventory cards retain these training results alongside speed, acceleration, turning, and campaign wins.
+
+Track selection uses cached snapshots of the actual legacy, campaign, or custom track instead of text-only buttons.
+
+When dragging an inventory model, the car and model name follow the pointer. Unlocked levels highlight cyan, locked levels highlight red, and invalid drops animate back to inventory.
+
+## Race rules
+
+A car must leave the starting area to arm its lap and then overlap the actual finish-line pixel mask. This prevents an immediate spawn-area completion without relying on approximate bitmap checkpoint positions. Collision, timeout, or failing to move three pixels for five seconds ends the attempt. Completing a campaign level opens a congratulations panel with **Next Level** and **Main Menu** actions; a failed attempt can be handed directly to Train as the seed for a new population.
+
+## Tests
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+Headless smoke testing is supported with SDL's dummy video/audio drivers.

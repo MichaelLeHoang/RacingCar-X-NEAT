@@ -1,0 +1,2639 @@
+{
+  "schema_version": 1,
+  "tracks": [
+    {
+      "name": "Open Circuit",
+      "tiles": [
+        {
+          "x": 5,
+          "y": 1,
+          "kind": "start_finish",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 7,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 8,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 3,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 4,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 5,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 8,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 7,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 5,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 5,
+          "kind": "corner",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        }
+      ],
+      "timeout": 29.6,
+      "difficulty": 2,
+      "source": "campaign",
+      "track_id": "level-2",
+      "schema_version": 2,
+      "runtime_type": "component",
+      "grid_size": [
+        14,
+        10
+      ],
+      "metrics": {
+        "tile_count": 24,
+        "corner_count": 4,
+        "turn_density": 0.1667,
+        "longest_straight": 7,
+        "shortest_straight_between_turns": 3,
+        "alternating_turns": 0,
+        "consecutive_technical_sections": 0,
+        "estimated_lap_distance": 1481.06,
+        "recovery_distance": 5.0,
+        "difficulty_score": 2.254,
+        "recommended_timeout": 29.6,
+        "open_connection_count": 0
+      },
+      "generation": {
+        "seed": 1200,
+        "difficulty": 2,
+        "attempt": 200,
+        "visited_nodes": 4877,
+        "fallback": true
+      }
+    },
+    {
+      "name": "Offset Run",
+      "tiles": [
+        {
+          "x": 5,
+          "y": 7,
+          "kind": "start_finish",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 7,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 7,
+          "y": 7,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 8,
+          "y": 7,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 7,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 7,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 7,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 6,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 4,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 3,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 12,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 3,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 4,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 6,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 7,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 8,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 9,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 12,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 8,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 7,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 5,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 9,
+          "kind": "corner",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 8,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 7,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 7,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        }
+      ],
+      "timeout": 41.7,
+      "difficulty": 3,
+      "source": "campaign",
+      "track_id": "level-3",
+      "schema_version": 2,
+      "runtime_type": "component",
+      "grid_size": [
+        14,
+        10
+      ],
+      "metrics": {
+        "tile_count": 36,
+        "corner_count": 6,
+        "turn_density": 0.1667,
+        "longest_straight": 9,
+        "shortest_straight_between_turns": 1,
+        "alternating_turns": 2,
+        "consecutive_technical_sections": 2,
+        "estimated_lap_distance": 2221.59,
+        "recovery_distance": 5.0,
+        "difficulty_score": 4.082,
+        "recommended_timeout": 41.7,
+        "open_connection_count": 0
+      },
+      "generation": {
+        "seed": 3781,
+        "difficulty": 3,
+        "attempt": 172,
+        "visited_nodes": 3891,
+        "fallback": false
+      }
+    },
+    {
+      "name": "Compact Hairpin",
+      "tiles": [
+        {
+          "x": 4,
+          "y": 2,
+          "kind": "start_finish",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 7,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 8,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 2,
+          "kind": "corner",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 3,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 4,
+          "kind": "corner",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 12,
+          "y": 4,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 4,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 3,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 0,
+          "kind": "corner",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 12,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 8,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 7,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 5,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "kind": "corner",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        }
+      ],
+      "timeout": 36.5,
+      "difficulty": 4,
+      "source": "campaign",
+      "track_id": "level-4",
+      "schema_version": 2,
+      "runtime_type": "component",
+      "grid_size": [
+        14,
+        10
+      ],
+      "metrics": {
+        "tile_count": 32,
+        "corner_count": 6,
+        "turn_density": 0.1875,
+        "longest_straight": 11,
+        "shortest_straight_between_turns": 1,
+        "alternating_turns": 2,
+        "consecutive_technical_sections": 3,
+        "estimated_lap_distance": 1965.59,
+        "recovery_distance": 4.33,
+        "difficulty_score": 4.504,
+        "recommended_timeout": 36.5,
+        "open_connection_count": 0
+      },
+      "generation": {
+        "seed": 3863,
+        "difficulty": 4,
+        "attempt": 138,
+        "visited_nodes": 3486,
+        "fallback": false
+      }
+    },
+    {
+      "name": "Switchback",
+      "tiles": [
+        {
+          "x": 6,
+          "y": 2,
+          "kind": "start_finish",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 7,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 8,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 12,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 2,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 0,
+          "kind": "corner",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 12,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 8,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 7,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 5,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 6,
+          "kind": "corner",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 2,
+          "y": 6,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 6,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        }
+      ],
+      "timeout": 39.8,
+      "difficulty": 5,
+      "source": "campaign",
+      "track_id": "level-5",
+      "schema_version": 2,
+      "runtime_type": "component",
+      "grid_size": [
+        14,
+        10
+      ],
+      "metrics": {
+        "tile_count": 36,
+        "corner_count": 8,
+        "turn_density": 0.2222,
+        "longest_straight": 10,
+        "shortest_straight_between_turns": 0,
+        "alternating_turns": 4,
+        "consecutive_technical_sections": 4,
+        "estimated_lap_distance": 2194.12,
+        "recovery_distance": 3.5,
+        "difficulty_score": 5.378,
+        "recommended_timeout": 39.8,
+        "open_connection_count": 0
+      },
+      "generation": {
+        "seed": 4138,
+        "difficulty": 5,
+        "attempt": 79,
+        "visited_nodes": 2048,
+        "fallback": false
+      }
+    },
+    {
+      "name": "Technical Sprint",
+      "tiles": [
+        {
+          "x": 5,
+          "y": 7,
+          "kind": "start_finish",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 7,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 7,
+          "y": 7,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 8,
+          "y": 7,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 7,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 6,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 5,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 12,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 5,
+          "kind": "corner",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 6,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 7,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 12,
+          "y": 7,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 12,
+          "y": 8,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 12,
+          "y": 9,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 8,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 7,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 5,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 2,
+          "y": 9,
+          "kind": "corner",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 2,
+          "y": 8,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 2,
+          "y": 7,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 7,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 7,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        }
+      ],
+      "timeout": 32.6,
+      "difficulty": 6,
+      "source": "campaign",
+      "track_id": "level-6",
+      "schema_version": 2,
+      "runtime_type": "component",
+      "grid_size": [
+        14,
+        10
+      ],
+      "metrics": {
+        "tile_count": 30,
+        "corner_count": 8,
+        "turn_density": 0.2667,
+        "longest_straight": 9,
+        "shortest_straight_between_turns": 0,
+        "alternating_turns": 4,
+        "consecutive_technical_sections": 5,
+        "estimated_lap_distance": 1810.12,
+        "recovery_distance": 2.75,
+        "difficulty_score": 5.883,
+        "recommended_timeout": 32.6,
+        "open_connection_count": 0
+      },
+      "generation": {
+        "seed": 4316,
+        "difficulty": 6,
+        "attempt": 56,
+        "visited_nodes": 1463,
+        "fallback": false
+      }
+    },
+    {
+      "name": "Endurance Mix",
+      "tiles": [
+        {
+          "x": 5,
+          "y": 7,
+          "kind": "start_finish",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 7,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 7,
+          "y": 7,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 8,
+          "y": 7,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 7,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 6,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 4,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 3,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 0,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 12,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 0,
+          "kind": "corner",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 3,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 4,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 12,
+          "y": 4,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 12,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 12,
+          "y": 6,
+          "kind": "corner",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 6,
+          "kind": "corner",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 7,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 8,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 12,
+          "y": 8,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 12,
+          "y": 9,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 8,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 7,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 5,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 9,
+          "kind": "corner",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 8,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 7,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 7,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        }
+      ],
+      "timeout": 42.2,
+      "difficulty": 7,
+      "source": "campaign",
+      "track_id": "level-7",
+      "schema_version": 2,
+      "runtime_type": "component",
+      "grid_size": [
+        14,
+        10
+      ],
+      "metrics": {
+        "tile_count": 40,
+        "corner_count": 12,
+        "turn_density": 0.3,
+        "longest_straight": 8,
+        "shortest_straight_between_turns": 0,
+        "alternating_turns": 6,
+        "consecutive_technical_sections": 7,
+        "estimated_lap_distance": 2395.19,
+        "recovery_distance": 2.33,
+        "difficulty_score": 6.694,
+        "recommended_timeout": 42.2,
+        "open_connection_count": 0
+      },
+      "generation": {
+        "seed": 4409,
+        "difficulty": 7,
+        "attempt": 8,
+        "visited_nodes": 206,
+        "fallback": false
+      }
+    },
+    {
+      "name": "Alternating Apex",
+      "tiles": [
+        {
+          "x": 5,
+          "y": 5,
+          "kind": "start_finish",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 7,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 8,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 5,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 4,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 3,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 0,
+          "kind": "corner",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 8,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 7,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 0,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 0,
+          "kind": "corner",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 0,
+          "y": 3,
+          "kind": "corner",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "kind": "corner",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 2,
+          "y": 5,
+          "kind": "corner",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        }
+      ],
+      "timeout": 32.9,
+      "difficulty": 8,
+      "source": "campaign",
+      "track_id": "level-8",
+      "schema_version": 2,
+      "runtime_type": "component",
+      "grid_size": [
+        14,
+        10
+      ],
+      "metrics": {
+        "tile_count": 32,
+        "corner_count": 12,
+        "turn_density": 0.375,
+        "longest_straight": 7,
+        "shortest_straight_between_turns": 0,
+        "alternating_turns": 6,
+        "consecutive_technical_sections": 9,
+        "estimated_lap_distance": 1883.19,
+        "recovery_distance": 1.67,
+        "difficulty_score": 7.409,
+        "recommended_timeout": 32.9,
+        "open_connection_count": 0
+      },
+      "generation": {
+        "seed": 4644,
+        "difficulty": 8,
+        "attempt": 14,
+        "visited_nodes": 358,
+        "fallback": false
+      }
+    },
+    {
+      "name": "Precision Ring",
+      "tiles": [
+        {
+          "x": 8,
+          "y": 5,
+          "kind": "start_finish",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 12,
+          "y": 5,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 12,
+          "y": 4,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 4,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 3,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 0,
+          "kind": "corner",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 12,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 0,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 8,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 7,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 0,
+          "kind": "corner",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 5,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 0,
+          "y": 3,
+          "kind": "corner",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "kind": "corner",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 5,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 0,
+          "y": 6,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 0,
+          "y": 7,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 0,
+          "y": 8,
+          "kind": "corner",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 8,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 2,
+          "y": 8,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 8,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 8,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 7,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 6,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 5,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 7,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        }
+      ],
+      "timeout": 45.9,
+      "difficulty": 9,
+      "source": "campaign",
+      "track_id": "level-9",
+      "schema_version": 2,
+      "runtime_type": "component",
+      "grid_size": [
+        14,
+        10
+      ],
+      "metrics": {
+        "tile_count": 46,
+        "corner_count": 18,
+        "turn_density": 0.3913,
+        "longest_straight": 7,
+        "shortest_straight_between_turns": 0,
+        "alternating_turns": 10,
+        "consecutive_technical_sections": 13,
+        "estimated_lap_distance": 2696.78,
+        "recovery_distance": 1.56,
+        "difficulty_score": 8.2,
+        "recommended_timeout": 45.9,
+        "open_connection_count": 0
+      },
+      "generation": {
+        "seed": 4928,
+        "difficulty": 9,
+        "attempt": 18,
+        "visited_nodes": 492,
+        "fallback": false
+      }
+    },
+    {
+      "name": "Final Circuit",
+      "tiles": [
+        {
+          "x": 3,
+          "y": 6,
+          "kind": "start_finish",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 7,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 8,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 9,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 2,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 0,
+          "y": 9,
+          "kind": "corner",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 0,
+          "y": 8,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 0,
+          "y": 7,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 7,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 6,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 0,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 7,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 8,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 0,
+          "kind": "corner",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 3,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 4,
+          "kind": "corner",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 4,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 12,
+          "y": 4,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 4,
+          "kind": "corner",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 6,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 7,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 8,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 13,
+          "y": 9,
+          "kind": "corner",
+          "rotation": 270,
+          "preview": {}
+        },
+        {
+          "x": 12,
+          "y": 9,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 9,
+          "kind": "corner",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 11,
+          "y": 8,
+          "kind": "corner",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 8,
+          "kind": "corner",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 10,
+          "y": 7,
+          "kind": "corner",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 7,
+          "kind": "corner",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 9,
+          "y": 6,
+          "kind": "corner",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 8,
+          "y": 6,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 7,
+          "y": 6,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 6,
+          "kind": "corner",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        },
+        {
+          "x": 6,
+          "y": 4,
+          "kind": "corner",
+          "rotation": 180,
+          "preview": {}
+        },
+        {
+          "x": 5,
+          "y": 4,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 4,
+          "y": 4,
+          "kind": "straight",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "kind": "corner",
+          "rotation": 90,
+          "preview": {}
+        },
+        {
+          "x": 3,
+          "y": 5,
+          "kind": "straight",
+          "rotation": 0,
+          "preview": {}
+        }
+      ],
+      "timeout": 52.2,
+      "difficulty": 10,
+      "source": "campaign",
+      "track_id": "level-10",
+      "schema_version": 2,
+      "runtime_type": "component",
+      "grid_size": [
+        14,
+        10
+      ],
+      "metrics": {
+        "tile_count": 54,
+        "corner_count": 24,
+        "turn_density": 0.4444,
+        "longest_straight": 4,
+        "shortest_straight_between_turns": 0,
+        "alternating_turns": 18,
+        "consecutive_technical_sections": 21,
+        "estimated_lap_distance": 3126.37,
+        "recovery_distance": 1.25,
+        "difficulty_score": 9.092,
+        "recommended_timeout": 52.2,
+        "open_connection_count": 0
+      },
+      "generation": {
+        "seed": 7150,
+        "difficulty": 10,
+        "attempt": 15,
+        "visited_nodes": 363,
+        "fallback": false
+      }
+    }
+  ]
+}

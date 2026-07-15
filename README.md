@@ -1,6 +1,9 @@
 # Racing Car X NEAT
 
-An interactive Pygame application for training NEAT-controlled cars, racing a ten-level campaign, managing saved models, and building reusable custom tracks.
+Racing Car X NEAT is an interactive top-down Pygame racing game built around
+neat-python. Train autonomous cars, save their genomes, race a ten-level
+campaign, and build tracks from the same semantic components used by collision,
+progress tracking, campaign content, and procedural generation.
 
 ## Setup
 
@@ -11,60 +14,142 @@ python -m pip install -r requirements.txt
 python RacingCar.py
 ```
 
-The window is resizable and uses a logical 1280×800 layout.
+The application uses a resizable window with a 1280×800 logical canvas. SDL's
+dummy video and audio drivers remain supported for headless tests.
 
-## Main modes
+## Game modes
 
-- **Get Started** — drag a saved model from the inventory onto an unlocked campaign level. Completing a level unlocks the next one globally.
-- **Train** — configure one or more named car models and select unlocked campaign/custom tracks, then run generations continuously until Stop is pressed or a genome finishes.
-- **Custom Tracks** — place snapping straight, corner, and start/finish pieces extracted from the original `track.png`. Components are reused at every angle by rotating them at runtime.
+### Play
 
-First Lap in both Campaign and Train uses the exact previous-version bitmap track, border, finish line, scale, and spawn geometry.
+Play opens Level Selection. Choose one of the available level cards before
+selecting a car. Locked cards are dimmed; completed cards show their best time.
 
-## Track editor controls
+The selected circuit then opens in race preparation. Drag a saved model from
+the in-race drawer onto the dashed **DROP CAR TO START** area. Browsing and
+dragging do not create a simulation car or start the timer. A valid drop starts
+a short READY → GO countdown; race time starts at GO.
 
-- Left click places or selects a piece.
-- Right click deletes a piece.
-- **R** rotates the selected or next piece clockwise by 90 degrees.
-- **Delete/Backspace** removes the selected piece.
-- **Ctrl/Cmd+Z** undoes the last edit.
-- The pill-shaped Rotate, Delete, Clear, Undo, Test, and Save controls provide mouse alternatives.
+A Play lap completes when the car returns to and overlaps the actual finish
+mask after first leaving the start area. Its initial placement cannot trigger a
+win. Ordered gates remain part of training fitness and champion validation. Completion, collision,
+stalling, and timeout permanently freeze the attempt time. Results offer the
+appropriate Next Level, Retry, Train This Car, and Level Select actions.
 
-A saved track must contain exactly one start/finish piece, at least eight pieces, matched joins, and one connected non-branching loop. Checkpoints are generated automatically.
+Level 1 keeps the repository's original `track.png`, `track-border.png`, finish
+line, scale, placement, and spawn direction. Levels 2–10 are stable checked-in
+semantic tracks with increasing geometry-derived difficulty.
 
-## Models and storage
+### Train
 
-- Champions are saved as versioned, non-executable `.rcmodel` JSON files.
-- Custom tracks are saved as versioned `.rctrack` JSON files.
-- Get Started and the saved-model inventory read from the same model collection. The inventory count and pagination expose every saved model.
-- Select a model and use **Rename** or **Delete**; right-clicking a card is also a rename shortcut. Deletion asks for confirmation.
-- Hover a model and press **Export** to copy it to the exports folder.
-- Place `.rcmodel` or `.rctrack` files in the imports folder and press **Import**.
-- Local data defaults to `~/.racing_car_x_neat`; set `RACING_DATA_DIR` to override it.
+Training continues to use NEAT population, species, reproduction, and JSON
+genome serialization. It runs as bounded simulation steps from the Pygame main
+loop, so Start, Pause, Resume, Stop, 1×, 2×, 4×, and Max remain responsive.
 
-All car sprites are normalized to 32×64 with transparent backgrounds. Each car type exposes saved performance stats for maximum speed, acceleration, and turning while controllers keep the same five normalized inputs and four actions.
+Three distinct modes are available:
 
-## Continuous training
+- **Original Track** evaluates and validates on the exact legacy bitmap track.
+- **Custom Tracks** evaluates every selected valid custom track and requires the
+  champion to pass all of them.
+- **Random Curriculum** rotates through deterministic generated training seeds
+  and difficulty bands. Validation uses three separate held-out seeds.
 
-- **Start Training** automatically advances through generations and rotates across selected tracks.
-- Training completes immediately when the first genome returns to and overlaps the finish-line pixel mask; that finisher becomes the saveable best model.
-- **Stop Training** immediately ends the partial generation and keeps its best genome available for saving.
-- Finishing or stopping opens a confirmation panel with **Save Best Model** and **Not Now** actions.
-- Space pauses or resumes without advancing simulation time.
-- The 1×, 2×, 4×, and Max pills change execution speed without changing simulation behavior.
-- Training stops automatically when the champion validates on all selected tracks; it can then be saved or restarted.
+Fitness rewards ordered path progress, first-time gates, controlled road speed,
+lap completion, and faster finishes. It penalizes reverse progress, collisions,
+spinning without progress, stalls, timeouts, and segment oscillation. One track
+finish records a candidate but does not stop the generation or validate a
+multi-track model.
 
-Use the **+** button to create up to six independent training-model configurations. Each tab retains its own name, car type, stats, selected tracks, population, generation, and current champion.
+Suite scoring is completion-first: the number of required tracks completed
+dominates fitness, completing every track adds a further suite bonus, and
+normalized lap time ranks genomes once their completion coverage is equal.
+NEAT's single-number early termination is disabled; only the declared validation
+suite can produce a Validated Champion.
 
-The Train screen reports live generation, best fitness, selected and passed tracks, run status, and car performance. Saved-model inventory cards retain these training results alongside speed, acceleration, turning, and campaign wins.
+Original Track completion uses the actual legacy finish-line bitmap mask after
+the car leaves the start area. Its approximate progress gates still contribute
+fitness, but missing one cannot cause a visibly completed lap to run forever.
 
-Track selection uses cached snapshots of the actual legacy, campaign, or custom track instead of text-only buttons.
+**Save Current Best** updates the current lineage record as a Draft instead of
+adding another inventory car. A model becomes Validated only after its entire
+declared validation suite passes. Stopping discards partial-generation
+fitness and preserves the latest completed champion. Multiple training profiles
+retain independent names, skins, modes, seeds, suites, populations, and results.
+Pressing **Stop Training** immediately opens a save prompt for that completed
+champion. Random Curriculum offers Save Draft and enables Save Validated only
+after all held-out validation tracks pass.
 
-When dragging an inventory model, the car and model name follow the pointer. Unlocked levels highlight cyan, locked levels highlight red, and invalid drops animate back to inventory.
+Play and Train read the same paginated saved-model inventory. A saved genome can
+be renamed, imported, exported, deleted, or continued from Train. Continuing
+restores its generation, skin, and declared track suite; choosing **Train This
+Car** after a campaign failure preselects that exact failed level as the suite.
+Training saves share a lineage identifier. Save Current Best replaces that
+lineage's Draft, and Save Validated Champion promotes the same inventory record,
+so neither action creates duplicate cars. Restored genomes also reserve their
+historical NEAT innovation range before mutation and crossover.
 
-## Race rules
+### Track Builder
 
-A car must leave the starting area to arm its lap and then overlap the actual finish-line pixel mask. This prevents an immediate spawn-area completion without relying on approximate bitmap checkpoint positions. Collision, timeout, or failing to move three pixels for five seconds ends the attempt. Completing a campaign level opens a congratulations panel with **Next Level** and **Main Menu** actions; a failed attempt can be handed directly to Train as the seed for a new population.
+The builder exposes Select, Straight, Corner, Start/Finish, Rotate, Delete,
+Undo, Redo, Clear, Test, Save, Import, Export, and Saved Tracks controls.
+Pieces snap to a 14×10 grid. Matching ports are green; open or mismatched ports
+and affected cells are red. Incomplete tracks are allowed while editing, but
+Save and Test remain disabled until validation passes.
+
+A saveable track requires:
+
+- Exactly one oriented Start/Finish piece.
+- At least 12 pieces and four corners.
+- Reciprocal ports, one connected component, and one non-branching closed loop.
+- No duplicate, out-of-bounds, crossing, sub-loop, or mask-merging pieces.
+- A straight approach and road-contained car drop area. Parallel lanes may sit
+  in neighboring cells when their canonical road/collision masks stay separate;
+  the builder reports that arrangement as a warning rather than rejecting it.
+
+Test opens normal race preparation so the test model is explicitly selected;
+testing never saves the editor snapshot. Invalid v1 tracks appear in Saved
+Tracks as **Needs repair** and cannot enter racing or training until fixed.
+
+## Canonical track system
+
+Component tracks use 64×64 semantic tiles with a 44-pixel asphalt width and
+center-aligned directional ports. Visual artwork, road masks, curb masks,
+collision masks, finish masks, drop zones, and editor previews all derive from
+the same geometry. Runtime play never crops arbitrary pieces from `track.png`.
+
+Checked-in assets under `imgs/tiles/` are reproducible with:
+
+```bash
+python tools/build_track_assets.py
+```
+
+The generator returns `TrackDefinition` records rather than image files. It is
+seeded, bounded by attempt and search-node limits, validates through the same
+builder validator, and uses validated deterministic fallbacks. Stable campaign
+content can be rebuilt with:
+
+```bash
+python tools/build_campaign_content.py
+```
+
+## Models, tracks, and compatibility
+
+Local data remains under `~/.racing_car_x_neat` unless `RACING_DATA_DIR` is set.
+The existing `models/`, `tracks/`, `imports/`, `exports/`, and `progress.json`
+locations are preserved. Writes use atomic temporary-file replacement.
+
+`.rcmodel` and `.rctrack` files are non-executable JSON. Schema-v1 models and
+tracks load through backward-compatible in-memory migration; the next save
+writes schema v2. Invalid imports are reported and left untouched.
+
+The controller contract is intentionally unchanged:
+
+- Controller version: `five-sensor-v1`
+- Inputs: five normalized distances—left, right, forward, forward-left, and
+  forward-right.
+- Outputs: left+accelerate, right+accelerate, straight+accelerate, and coast.
+
+Changing this contract requires a new explicit controller version and migration
+strategy. Existing saved genomes are not silently reinterpreted.
 
 ## Tests
 
@@ -72,4 +157,7 @@ A car must leave the starting area to arm its lap and then overlap the actual fi
 python -m unittest discover -s tests -v
 ```
 
-Headless smoke testing is supported with SDL's dummy video/audio drivers.
+The suite covers canonical seams and masks, structured topology diagnostics,
+hundreds of generated seeds, stable campaign geometry, preparation/drop flow,
+ordered lap completion, frozen timers, progress-aware multi-track fitness,
+held-out validation, editor history, and v1/v2 persistence.

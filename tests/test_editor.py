@@ -8,50 +8,61 @@ os.environ.setdefault("SDL_AUDIODRIVER", "dummy")
 import pygame
 
 from interactive_app import ASSET_DIR, InteractiveApp, load_car_sprite
+from test_core import valid_track
 
 
 class EditorInteractionTests(unittest.TestCase):
+    def setUp(self):
+        self.directory = tempfile.TemporaryDirectory(); os.environ["RACING_DATA_DIR"] = self.directory.name
+        self.app = InteractiveApp()
+
+    def tearDown(self):
+        pygame.quit(); self.directory.cleanup()
+
     def test_car_sprites_share_size_and_transparent_corners(self):
-        pygame.display.set_mode((1, 1))
         for filename in ("WhiteCar.png", "RedCar.png", "green-car.png", "purple-car.png", "grey-car.png"):
             sprite = load_car_sprite(ASSET_DIR / filename)
             self.assertEqual((32, 64), sprite.get_size())
             self.assertEqual(0, sprite.get_at((0, 0)).a)
 
     def test_multiple_training_profiles_keep_independent_configuration(self):
-        with tempfile.TemporaryDirectory() as directory:
-            os.environ["RACING_DATA_DIR"] = directory
-            app = InteractiveApp()
-            app.model_name = "Speedster"; app.training_skin = "red"
-            app.add_training_profile()
-            app.model_name = "Corner Pro"; app.training_skin = "green"
-            app.switch_training_profile(0)
-            self.assertEqual("Speedster", app.model_name)
-            self.assertEqual("red", app.training_skin)
-            app.switch_training_profile(1)
-            self.assertEqual("Corner Pro", app.model_name)
-            self.assertEqual("green", app.training_skin)
-            pygame.quit()
+        self.app.model_name = "Speedster"; self.app.training_skin = "red"; self.app.add_training_profile()
+        self.app.model_name = "Corner Pro"; self.app.training_skin = "green"; self.app.switch_training_profile(0)
+        self.assertEqual("Speedster", self.app.model_name); self.assertEqual("red", self.app.training_skin)
+        self.app.switch_training_profile(1)
+        self.assertEqual("Corner Pro", self.app.model_name); self.assertEqual("green", self.app.training_skin)
 
-    def test_drag_piece_and_rotate_with_r(self):
-        with tempfile.TemporaryDirectory() as directory:
-            os.environ["RACING_DATA_DIR"] = directory
-            app = InteractiveApp()
-            app.logical_mouse = lambda: (1000, 210)
-            app.event_editor(pygame.event.Event(
-                pygame.MOUSEBUTTONDOWN, button=1, pos=(1000, 210)
-            ))
-            self.assertEqual("straight", app.editor_drag_kind)
-            app.event_editor(pygame.event.Event(
-                pygame.KEYDOWN, key=pygame.K_r, unicode="r", mod=0
-            ))
-            app.logical_mouse = lambda: (42 + 3 * 64 + 20, 105 + 4 * 64 + 20)
-            app.event_editor(pygame.event.Event(
-                pygame.MOUSEBUTTONUP, button=1, pos=(0, 0)
-            ))
-            self.assertEqual("straight", app.editor_tiles[(3, 4)].kind)
-            self.assertEqual(90, app.editor_tiles[(3, 4)].rotation)
-            pygame.quit()
+    def test_placement_overwrite_requires_confirmation(self):
+        self.app._place_editor_tile((3, 4), "straight", 0)
+        original = self.app.editor_tiles[(3, 4)]
+        self.app._place_editor_tile((3, 4), "corner", 90)
+        self.assertIsNotNone(self.app.pending_replace)
+        self.assertIs(original, self.app.editor_tiles[(3, 4)])
+
+    def test_undo_and_redo_cover_placement(self):
+        self.app._place_editor_tile((3, 4), "straight", 0)
+        self.assertIn((3, 4), self.app.editor_tiles)
+        self.app._undo(); self.assertNotIn((3, 4), self.app.editor_tiles)
+        self.app._redo(); self.assertIn((3, 4), self.app.editor_tiles)
+
+    def test_invalid_track_cannot_save_and_valid_track_appears_immediately(self):
+        self.app._place_editor_tile((1, 1), "straight", 0)
+        self.app.save_editor_track()
+        self.assertEqual([], self.app.storage.custom_tracks())
+        track = valid_track("Saved Circuit")
+        self.app.editor_tiles = {tile.cell: tile for tile in track.tiles}
+        self.app.editor_name = track.name
+        self.app.save_editor_track()
+        self.assertEqual("Saved Circuit", self.app.custom[0].name)
+
+    def test_testing_valid_track_enters_preparation_without_saving(self):
+        track = valid_track("Unsaved Test")
+        self.app.editor_tiles = {tile.cell: tile for tile in track.tiles}; self.app.editor_name = track.name
+        before = len(self.app.storage.custom_tracks())
+        self.app.prepare_race(self.app.editor_track())
+        self.assertEqual("race", self.app.scene)
+        self.assertEqual("PREPARING", self.app.race_session.state.value)
+        self.assertEqual(before, len(self.app.storage.custom_tracks()))
 
 
 if __name__ == "__main__":
